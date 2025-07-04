@@ -18,6 +18,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { toast } from "sonner";
 
 export default function BookingForm() {
   const { t } = useLanguage();
@@ -28,7 +29,8 @@ export default function BookingForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Show coming soon message for MVP
-    alert("Our full booking service will be launching soon. Sign up now to receive a discount on your first booking!");
+    // alert("Our full booking service will be launching soon. Sign up now to receive a discount on your first booking!");
+    toast.error("Our full booking service will be launching soon. Sign up now to receive a discount on your first booking!");
   };
 
   return (

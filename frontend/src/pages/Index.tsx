@@ -20,7 +20,7 @@ const featuredCaregivers: CaregiverProps[] = [
     rating: 4.9,
     reviewCount: 127,
     location: "Lagos, Nigeria",
-    image: "https://images.pexels.com/photos/3771069/pexels-photo-3771069.jpeg?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop&crop=face",
     specialties: ["Elderly Care", "Chronic Illness", "Mobility Assistance"],
     languages: ["English", "Yoruba", "French"],
     experience: 8,
@@ -34,7 +34,7 @@ const featuredCaregivers: CaregiverProps[] = [
     rating: 4.8,
     reviewCount: 89,
     location: "Accra, Ghana",
-    image: "https://images.pexels.com/photos/3771069/pexels-photo-3771069.jpeg?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop&crop=face",
     specialties: ["Post-Surgery Care", "Rehabilitation", "Medication Management"],
     languages: ["English", "Twi", "Ga"],
     experience: 6,
@@ -48,7 +48,7 @@ const featuredCaregivers: CaregiverProps[] = [
     rating: 4.9,
     reviewCount: 156,
     location: "Nairobi, Kenya",
-    image: "https://images.pexels.com/photos/3771069/pexels-photo-3771069.jpeg?w=400&h=400&fit=crop",
+    image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop&crop=face",
     specialties: ["Dementia Care", "Mental Health", "Companionship"],
     languages: ["English", "Swahili", "Kikuyu"],
     experience: 7,
@@ -133,21 +133,21 @@ export default function Index() {
               <div className="relative animate-fade-in [animation-delay:300ms]">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=450&fit=crop"
+                    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
                     alt="Professional caregiver with elderly person"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="absolute -bottom-6 -left-6 w-2/3 rounded-2xl overflow-hidden shadow-xl">
                   <img
-                    src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop"
+                    src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
                     alt="Caregiver providing care"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="absolute -top-6 -right-6 w-1/2 rounded-2xl overflow-hidden shadow-xl">
                   <img
-                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=300&h=225&fit=crop"
+                    src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=300&q=80"
                     alt="Family care moment"
                     className="w-full h-full object-cover"
                   />
@@ -291,7 +291,7 @@ export default function Index() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="btn-primary">
-                  <Link to="/signup">Book a Caregiver Now</Link>
+                  <Link to="/arrange-care">Book a Caregiver Now</Link>
                 </Button>
                 <Button asChild size="lg" variant="outline">
                   <Link to="/careers">Become a Caregiver</Link>

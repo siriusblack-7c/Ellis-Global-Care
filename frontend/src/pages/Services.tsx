@@ -7,7 +7,7 @@ const services = [
   {
     title: "Personal Care Assistance",
     description: "Dignified and respectful assistance with daily activities such as bathing, dressing, grooming, and mobility support to ensure comfort and well-being.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80",
     points: [
       "Bathing and Hygiene",
       "Dressing and Grooming",
@@ -18,7 +18,7 @@ const services = [
   {
     title: "Companionship & Social Engagement",
     description: "Friendly companionship to combat loneliness and promote mental and emotional health through conversation, activities, and social outings.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?auto=format&fit=crop&w=600&q=80",
     points: [
       "Meaningful Conversation",
       "Hobbies and Activities",
@@ -29,7 +29,7 @@ const services = [
   {
     title: "Meal Preparation & Nutrition",
     description: "Planning and preparing nutritious meals that cater to dietary needs and preferences, ensuring your loved ones eat well-balanced and delicious food.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80",
     points: [
       "Meal Planning",
       "Grocery Shopping",
@@ -40,7 +40,7 @@ const services = [
   {
     title: "Medication Management",
     description: "Reliable reminders and assistance with medication schedules to ensure that prescriptions are taken correctly and on time.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80",
     points: [
       "Medication Reminders",
       "Organizing Pills",
@@ -51,7 +51,7 @@ const services = [
   {
     title: "Light Housekeeping & Errands",
     description: "Maintaining a clean, safe, and comfortable living environment, as well as running essential errands for your loved ones.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=600&q=80",
     points: [
       "Tidying and Cleaning",
       "Laundry and Linens",
@@ -62,7 +62,7 @@ const services = [
   {
     title: "Specialized & Respite Care",
     description: "Specialized support for conditions like Dementia and Alzheimer's, as well as providing temporary relief for primary family caregivers.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop",
+    image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
     points: [
       "Dementia & Alzheimer's Care",
       "Post-Surgery Support",
