@@ -4,42 +4,42 @@ import Footer from "@/components/Footer";
 
 const galleryImages = [
   {
-    src: "https://ellis-global-care.s3.amazonaws.com/gallery-1.jpg",
+    src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop",
     alt: "Caregiver assisting elderly woman with a walker",
     caption: "Providing mobility support with a smile."
   },
   {
-    src: "https://ellis-global-care.s3.amazonaws.com/gallery-2.jpg",
+    src: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop",
     alt: "Caregiver and elderly man playing a board game",
     caption: "Engaging in stimulating activities and companionship."
   },
   {
-    src: "https://ellis-global-care.s3.amazonaws.com/gallery-3.jpg",
+    src: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&h=400&fit=crop",
     alt: "Caregiver preparing a healthy meal for a client",
     caption: "Nutritious and delicious meals, prepared with care."
   },
   {
-    src: "https://ellis-global-care.s3.amazonaws.com/gallery-4.jpg",
+    src: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&h=400&fit=crop",
     alt: "Caregiver reading a book to an elderly woman",
     caption: "Sharing stories and moments of connection."
   },
   {
-    src: "https://ellis-global-care.s3.amazonaws.com/gallery-5.jpg",
+    src: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=600&h=400&fit=crop",
     alt: "Caregiver helping an elderly man with his medication",
     caption: "Ensuring health and safety with medication management."
   },
   {
-    src: "https://ellis-global-care.s3.amazonaws.com/gallery-6.jpg",
+    src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop",
     alt: "Group of caregivers in a training session",
     caption: "Our caregivers are trained to the highest standards."
   },
    {
-    src: "https://ellis-global-care.s3.amazonaws.com/gallery-7.jpg",
+    src: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop",
     alt: "Caregiver and client enjoying a walk in the garden",
     caption: "Promoting an active and healthy lifestyle."
   },
   {
-    src: "https://ellis-global-care.s3.amazonaws.com/gallery-8.jpg",
+    src: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&h=400&fit=crop",
     alt: "A happy client with her caregiver",
     caption: "Building trusting and meaningful relationships."
   }

@@ -37,7 +37,7 @@ export default function About() {
               </div>
               <div>
                 <img
-                  src="https://ellis-global-care.s3.amazonaws.com/about-us.jpg"
+                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop"
                   alt="Our team"
                   className="rounded-lg shadow-lg"
                 />

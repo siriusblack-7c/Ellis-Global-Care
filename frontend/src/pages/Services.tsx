@@ -7,7 +7,7 @@ const services = [
   {
     title: "Personal Care Assistance",
     description: "Dignified and respectful assistance with daily activities such as bathing, dressing, grooming, and mobility support to ensure comfort and well-being.",
-    image: "https://ellis-global-care.s3.amazonaws.com/service-personal-care.jpg",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop",
     points: [
       "Bathing and Hygiene",
       "Dressing and Grooming",
@@ -18,7 +18,7 @@ const services = [
   {
     title: "Companionship & Social Engagement",
     description: "Friendly companionship to combat loneliness and promote mental and emotional health through conversation, activities, and social outings.",
-    image: "https://ellis-global-care.s3.amazonaws.com/service-companionship.jpg",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop",
     points: [
       "Meaningful Conversation",
       "Hobbies and Activities",
@@ -29,7 +29,7 @@ const services = [
   {
     title: "Meal Preparation & Nutrition",
     description: "Planning and preparing nutritious meals that cater to dietary needs and preferences, ensuring your loved ones eat well-balanced and delicious food.",
-    image: "https://ellis-global-care.s3.amazonaws.com/service-nutrition.jpg",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop",
     points: [
       "Meal Planning",
       "Grocery Shopping",
@@ -40,7 +40,7 @@ const services = [
   {
     title: "Medication Management",
     description: "Reliable reminders and assistance with medication schedules to ensure that prescriptions are taken correctly and on time.",
-    image: "https://ellis-global-care.s3.amazonaws.com/service-medication.jpg",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop",
     points: [
       "Medication Reminders",
       "Organizing Pills",
@@ -51,7 +51,7 @@ const services = [
   {
     title: "Light Housekeeping & Errands",
     description: "Maintaining a clean, safe, and comfortable living environment, as well as running essential errands for your loved ones.",
-    image: "https://ellis-global-care.s3.amazonaws.com/service-housekeeping.jpg",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop",
     points: [
       "Tidying and Cleaning",
       "Laundry and Linens",
@@ -62,7 +62,7 @@ const services = [
   {
     title: "Specialized & Respite Care",
     description: "Specialized support for conditions like Dementia and Alzheimer's, as well as providing temporary relief for primary family caregivers.",
-    image: "https://ellis-global-care.s3.amazonaws.com/service-specialized.jpg",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop",
     points: [
       "Dementia & Alzheimer's Care",
       "Post-Surgery Support",

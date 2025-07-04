@@ -8,48 +8,48 @@ import { Badge } from "@/components/ui/badge";
 import { CaregiverProps } from "@/components/CaregiverCard";
 
 const allCaregivers: CaregiverProps[] = [
-    {
-        id: "1",
-        name: "Adunni Olatunji",
-        bio: "Experienced caregiver with specialization in elderly care and chronic illness management. Trained in Canada with 8+ years of experience. Adunni is known for her patience, warmth, and ability to connect with clients on a personal level. She is passionate about creating a safe and nurturing environment for those she cares for.",
-        hourlyRate: 15,
-        rating: 4.9,
-        reviewCount: 127,
-        location: "Lagos, Nigeria",
-        image: "https://ellis-global-care.s3.amazonaws.com/caregiver-1.jpg",
-        specialties: ["Elderly Care", "Chronic Illness", "Mobility Assistance", "Palliative Care"],
-        languages: ["English", "Yoruba", "French"],
-        experience: 8,
-        availability: "Available"
-      },
-      {
-        id: "2", 
-        name: "Grace Mensah",
-        bio: "Certified nursing assistant with expertise in post-surgery care and rehabilitation. Compassionate and dedicated to patient wellbeing. Grace is a highly skilled professional who is committed to helping her clients regain their independence and quality of life.",
-        hourlyRate: 18,
-        rating: 4.8,
-        reviewCount: 89,
-        location: "Accra, Ghana",
-        image: "https://ellis-global-care.s3.amazonaws.com/caregiver-2.jpg",
-        specialties: ["Post-Surgery Care", "Rehabilitation", "Medication Management", "Wound Care"],
-        languages: ["English", "Twi", "Ga"],
-        experience: 6,
-        availability: "Available"
-      },
-      {
-        id: "3",
-        name: "Fatima Mwangi",
-        bio: "Professional caregiver with training in dementia care and mental health support. Brings warmth and patience to every interaction. Fatima is dedicated to providing a supportive and stimulating environment for clients with cognitive challenges.",
-        hourlyRate: 16,
-        rating: 4.9,
-        reviewCount: 156,
-        location: "Nairobi, Kenya",
-        image: "https://ellis-global-care.s3.amazonaws.com/caregiver-3.jpg",
-        specialties: ["Dementia Care", "Mental Health", "Companionship", "Behavioral Support"],
-        languages: ["English", "Swahili", "Kikuyu"],
-        experience: 7,
-        availability: "Available"
-      }
+  {
+    id: "1",
+    name: "Adunni Olatunji",
+    bio: "Experienced caregiver with specialization in elderly care and chronic illness management. Trained in Canada with 8+ years of experience. Adunni is known for her patience, warmth, and ability to connect with clients on a personal level. She is passionate about creating a safe and nurturing environment for those she cares for.",
+    hourlyRate: 15,
+    rating: 4.9,
+    reviewCount: 127,
+    location: "Lagos, Nigeria",
+    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop&crop=face",
+    specialties: ["Elderly Care", "Chronic Illness", "Mobility Assistance", "Palliative Care"],
+    languages: ["English", "Yoruba", "French"],
+    experience: 8,
+    availability: "Available"
+  },
+  {
+    id: "2",
+    name: "Grace Mensah",
+    bio: "Certified nursing assistant with expertise in post-surgery care and rehabilitation. Compassionate and dedicated to patient wellbeing. Grace is a highly skilled professional who is committed to helping her clients regain their independence and quality of life.",
+    hourlyRate: 18,
+    rating: 4.8,
+    reviewCount: 89,
+    location: "Accra, Ghana",
+    image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop&crop=face",
+    specialties: ["Post-Surgery Care", "Rehabilitation", "Medication Management", "Wound Care"],
+    languages: ["English", "Twi", "Ga"],
+    experience: 6,
+    availability: "Available"
+  },
+  {
+    id: "3",
+    name: "Fatima Mwangi",
+    bio: "Professional caregiver with training in dementia care and mental health support. Brings warmth and patience to every interaction. Fatima is dedicated to providing a supportive and stimulating environment for clients with cognitive challenges.",
+    hourlyRate: 16,
+    rating: 4.9,
+    reviewCount: 156,
+    location: "Nairobi, Kenya",
+    image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=400&h=400&fit=crop&crop=face",
+    specialties: ["Dementia Care", "Mental Health", "Companionship", "Behavioral Support"],
+    languages: ["English", "Swahili", "Kikuyu"],
+    experience: 7,
+    availability: "Available"
+  }
 ];
 
 export default function CaregiverDetails() {
@@ -93,7 +93,7 @@ export default function CaregiverDetails() {
                   {caregiver.location}
                 </div>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">{caregiver.bio}</p>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                   <div>
                     <h3 className="text-2xl font-bold mb-4">Specialties</h3>

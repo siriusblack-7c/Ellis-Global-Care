@@ -20,21 +20,21 @@ const featuredCaregivers: CaregiverProps[] = [
     rating: 4.9,
     reviewCount: 127,
     location: "Lagos, Nigeria",
-    image: "https://ellis-global-care.s3.amazonaws.com/caregiver-1.jpg",
+    image: "https://images.pexels.com/photos/3771069/pexels-photo-3771069.jpeg?w=400&h=400&fit=crop",
     specialties: ["Elderly Care", "Chronic Illness", "Mobility Assistance"],
     languages: ["English", "Yoruba", "French"],
     experience: 8,
     availability: "Available"
   },
   {
-    id: "2", 
+    id: "2",
     name: "Grace Mensah",
     bio: "Certified nursing assistant with expertise in post-surgery care and rehabilitation. Compassionate and dedicated to patient wellbeing.",
     hourlyRate: 18,
     rating: 4.8,
     reviewCount: 89,
     location: "Accra, Ghana",
-    image: "https://ellis-global-care.s3.amazonaws.com/caregiver-2.jpg",
+    image: "https://images.pexels.com/photos/3771069/pexels-photo-3771069.jpeg?w=400&h=400&fit=crop",
     specialties: ["Post-Surgery Care", "Rehabilitation", "Medication Management"],
     languages: ["English", "Twi", "Ga"],
     experience: 6,
@@ -48,7 +48,7 @@ const featuredCaregivers: CaregiverProps[] = [
     rating: 4.9,
     reviewCount: 156,
     location: "Nairobi, Kenya",
-    image: "https://ellis-global-care.s3.amazonaws.com/caregiver-3.jpg",
+    image: "https://images.pexels.com/photos/3771069/pexels-photo-3771069.jpeg?w=400&h=400&fit=crop",
     specialties: ["Dementia Care", "Mental Health", "Companionship"],
     languages: ["English", "Swahili", "Kikuyu"],
     experience: 7,
@@ -58,12 +58,12 @@ const featuredCaregivers: CaregiverProps[] = [
 
 export default function Index() {
   const { t } = useLanguage();
-  
+
   useEffect(() => {
     // Scroll to top when component mounts
     window.scrollTo(0, 0);
   }, []);
-  
+
   // Feature items
   const features = [
     {
@@ -97,15 +97,15 @@ export default function Index() {
       description: "Currently serving Nigeria, Ghana, Kenya with plans to expand across Africa to serve more families."
     }
   ];
-  
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      
+
       <main className="flex-1">
         {/* Hero Section */}
         <HeroSection />
-        
+
         {/* Welcome Section */}
         <section id="welcome" className="section">
           <div className="container">
@@ -129,25 +129,25 @@ export default function Index() {
                   </Link>
                 </Button>
               </div>
-              
+
               <div className="relative animate-fade-in [animation-delay:300ms]">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden">
-                  <img 
-                    src="https://ellis-global-care.s3.amazonaws.com/care-image-1.jpg"
+                  <img
+                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=450&fit=crop"
                     alt="Professional caregiver with elderly person"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="absolute -bottom-6 -left-6 w-2/3 rounded-2xl overflow-hidden shadow-xl">
                   <img
-                    src="https://ellis-global-care.s3.amazonaws.com/care-image-2.jpg"
+                    src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop"
                     alt="Caregiver providing care"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="absolute -top-6 -right-6 w-1/2 rounded-2xl overflow-hidden shadow-xl">
                   <img
-                    src="https://ellis-global-care.s3.amazonaws.com/care-image-3.jpg"
+                    src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=300&h=225&fit=crop"
                     alt="Family care moment"
                     className="w-full h-full object-cover"
                   />
@@ -156,7 +156,7 @@ export default function Index() {
             </div>
           </div>
         </section>
-        
+
         {/* Booking Form Section */}
         <section className="relative py-20 bg-gradient-to-r from-primary/5 to-white dark:from-primary/10 dark:to-background overflow-hidden">
           <div className="container relative z-10">
@@ -198,18 +198,18 @@ export default function Index() {
                   </li>
                 </ul>
               </div>
-              
+
               <BookingForm />
             </div>
           </div>
-          
+
           {/* Decorative elements */}
           <div className="absolute top-0 right-0 w-1/3 h-full opacity-10">
             <div className="absolute top-10 right-10 w-64 h-64 rounded-full bg-primary/50 blur-3xl" />
             <div className="absolute bottom-10 right-40 w-48 h-48 rounded-full bg-primary/30 blur-3xl" />
           </div>
         </section>
-        
+
         {/* Featured Caregivers */}
         <section className="section">
           <div className="container">
@@ -224,7 +224,7 @@ export default function Index() {
                 Our caregivers are the heart of our service. Each one is selected for their skills, compassion, and dedication.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredCaregivers.map((caregiver, index) => (
                 <div key={caregiver.id} className="animate-fade-in" style={{ animationDelay: `${(index + 1) * 100}ms` }}>
@@ -232,7 +232,7 @@ export default function Index() {
                 </div>
               ))}
             </div>
-            
+
             <div className="text-center mt-12">
               <Button asChild className="btn-primary">
                 <Link to="/caregivers">
@@ -242,10 +242,10 @@ export default function Index() {
             </div>
           </div>
         </section>
-        
+
         {/* Testimonials Section */}
         <TestimonialsSection />
-        
+
         {/* Features Section */}
         <section className="section bg-card">
           <div className="container">
@@ -260,11 +260,11 @@ export default function Index() {
                 We are committed to providing a service that is not only reliable and professional but also deeply compassionate and respectful of your family's culture and values.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="glass-card p-6 rounded-xl animate-fade-in flex flex-col items-center text-center"
                   style={{ animationDelay: `${(index + 1) * 100}ms` }}
                 >
@@ -278,7 +278,7 @@ export default function Index() {
             </div>
           </div>
         </section>
-        
+
         {/* CTA Section */}
         <section className="relative py-24 bg-primary/5">
           <div className="container">
@@ -299,20 +299,20 @@ export default function Index() {
               </div>
             </div>
           </div>
-          
+
           {/* Decorative waves */}
           <div className="absolute bottom-0 left-0 right-0 h-24 overflow-hidden">
-            <svg 
+            <svg
               className="absolute bottom-0 w-full h-24 fill-background"
               preserveAspectRatio="none"
               viewBox="0 0 1440 74"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path 
+              <path
                 d="M0,37.1L40,34.5C80,32,160,27,240,29.6C320,32,400,42,480,42.9C560,44,640,35,720,32.1C800,30,880,34,960,40.8C1040,47,1120,56,1200,56.6C1280,57,1360,48,1400,43.3L1440,39.1L1440,74L1400,74C1360,74,1280,74,1200,74C1120,74,1040,74,960,74C880,74,800,74,720,74C640,74,560,74,480,74C400,74,320,74,240,74C160,74,80,74,40,74L0,74Z"
                 className="animate-wave opacity-50"
               />
-              <path 
+              <path
                 d="M0,37.1L40,34.5C80,32,160,27,240,29.6C320,32,400,42,480,42.9C560,44,640,35,720,32.1C800,30,880,34,960,40.8C1040,47,1120,56,1200,56.6C1280,57,1360,48,1400,43.3L1440,39.1L1440,74L1400,74C1360,74,1280,74,1200,74C1120,74,1040,74,960,74C880,74,800,74,720,74C640,74,560,74,480,74C400,74,320,74,240,74C160,74,80,74,40,74L0,74Z"
                 className="animate-wave opacity-100 [animation-delay:-4s]"
               />
@@ -320,7 +320,7 @@ export default function Index() {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );
