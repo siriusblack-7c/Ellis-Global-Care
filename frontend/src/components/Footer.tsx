@@ -10,13 +10,13 @@ export default function Footer() {
   return (
     <footer className="bg-card text-card-foreground pt-16 pb-8 border-t">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           <div className="animate-fade-in [animation-delay:100ms]">
-            <h4 className="text-xl font-bold mb-4">Ellis Global Care</h4>
+            <h4 className="text-xl font-bold mb-4">Ellis</h4>
             <p className="text-muted-foreground mb-4">
-              Providing compassionate and professional care for your loved ones back home.
+              Providing compassionate and professional in-home care for your loved ones worldwide.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-3">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Facebook size={20} />
                 <span className="sr-only">Facebook</span>
@@ -39,7 +39,7 @@ export default function Footer() {
                 { name: "Home", path: "/" },
                 { name: "About Us", path: "/about" },
                 { name: "Careers", path: "/careers" },
-                { name: "Contact", path: "/contact" },
+                { name: "Contact Us", path: "/contact" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link 
@@ -54,51 +54,34 @@ export default function Footer() {
           </div>
           
           <div className="animate-fade-in [animation-delay:300ms]">
-            <h4 className="text-xl font-bold mb-4">{t.footer.contact}</h4>
-            <ul className="space-y-3">
+            <Link to="/contact">
+              <h4 className="text-xl font-bold mb-4">Contact Us</h4>
+            </Link>
+            <ul className="space-y-2">
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 mr-2 mt-0.5 text-primary" />
                 <span className="text-muted-foreground">
-                  123 Care Street<br />
-                  Lagos, 100211<br />
-                  Nigeria
+                  <a href="https://www.google.com/maps/place/5+San+Romanoway/@43.7581123,-79.5155436,18.22z/data=!4m15!1m8!3m7!1s0x882b31ceb85030df:0x2f643de1ca535b4!2sJane+and+Finch,+North+York,+ON,+Canada!3b1!8m2!3d43.7572667!4d-79.5176918!16zL20vMDN6dGpm!3m5!1s0x882b31184483bc39:0x44d4c829162f919d!8m2!3d43.758537!4d-79.5151587!16s%2Fg%2F11jj10klvk?entry=ttu&g_ep=EgoyMDI1MDcwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                    203-5 San Romanoway<br />
+                    North York, Ontario M3N 2Y4<br />
+                    Canada
+                  </a>
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="w-5 h-5 mr-2 text-primary" />
-                <span className="text-muted-foreground">+234 123 456 7890</span>
+                <span className="text-muted-foreground">+1 (416) 555-0123</span>
               </li>
               <li className="flex items-center">
                 <Mail className="w-5 h-5 mr-2 text-primary" />
-                <span className="text-muted-foreground">info@ellisglobalcare.com</span>
+                <span className="text-muted-foreground">info@elliscare.ca</span>
               </li>
             </ul>
-          </div>
-          
-          <div className="animate-fade-in [animation-delay:400ms]">
-            <h4 className="text-xl font-bold mb-4">{t.footer.newsletter}</h4>
-            <p className="text-muted-foreground mb-4">
-              {t.footer.newsletterDesc}
-            </p>
-            <form className="flex flex-col space-y-2">
-              <input 
-                type="email" 
-                placeholder={t.footer.yourEmail} 
-                className="rounded-md px-4 py-2 bg-muted text-foreground"
-                required 
-              />
-              <button 
-                type="submit" 
-                className="btn-primary mt-2"
-              >
-                {t.footer.subscribe}
-              </button>
-            </form>
           </div>
         </div>
         
         <div className="border-t border-border pt-8 mt-8 text-center text-muted-foreground">
-          <p>&copy; {currentYear} Ellis Global Care. {t.footer.allRights}</p>
+          <p>&copy;  Ellis Care Global Limited. All rights reserved.</p>
         </div>
       </div>
     </footer>

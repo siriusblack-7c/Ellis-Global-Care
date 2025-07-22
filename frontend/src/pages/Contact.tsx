@@ -16,29 +16,28 @@ export default function Contact() {
     subject: "",
     message: ""
   });
-  
+
   const [isSubmitted, setIsSubmitted] = useState(false);
-  
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    
+
     toast({
       title: "Message Sent!",
       description: "Thank you for contacting us. We will get back to you shortly.",
     });
 
     setIsSubmitted(true);
-    
+
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
@@ -49,13 +48,13 @@ export default function Contact() {
       });
     }, 3000);
   };
-  
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      
-      <main className="flex-1 pt-20">
-        <section className="relative py-20 bg-gray-50 dark:bg-gray-800/20">
+
+      <main className="flex-1">
+        <section className="relative py-20 bg-blue-50 dark:bg-blue-950/20 mt-20">
           <div className="container relative z-10">
             <div className="max-w-3xl mx-auto text-center animate-fade-in">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
@@ -67,13 +66,13 @@ export default function Contact() {
             </div>
           </div>
         </section>
-        
+
         <section className="section">
           <div className="container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div className="animate-fade-in [animation-delay:100ms]">
                 <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
-                
+
                 <div className="space-y-6 mb-8">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
@@ -82,13 +81,13 @@ export default function Contact() {
                     <div>
                       <h3 className="font-semibold mb-1">Our Office</h3>
                       <p className="text-muted-foreground">
-                        123 Care Street<br />
-                        Lagos, 100211<br />
-                        Nigeria
+                        203-5 San Romanoway<br />
+                        North York, Ontario M3N 2Y4<br />
+                        Canada
                       </p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start">
                     <div className="flex-shrink-0 h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
                       <Phone className="h-5 w-5 text-primary" />
@@ -98,7 +97,7 @@ export default function Contact() {
                       <p className="text-muted-foreground">+234 123 456 7890</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start">
                     <div className="flex-shrink-0 h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center mr-4">
                       <Mail className="h-5 w-5 text-primary" />
@@ -109,76 +108,76 @@ export default function Contact() {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="aspect-video rounded-xl overflow-hidden">
-                  <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.741182455527!2d3.391424914770028!3d6.42799999534895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae6ab399d%3A0xacde7139025b354b!2sLagos!5e0!3m2!1sen!2sng!4v1628613152777!5m2!1sen!2sng"
-                    width="100%" 
-                    height="100%" 
-                    style={{ border: 0 }} 
-                    allowFullScreen 
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2880.835791244122!2d-79.52046688450005!3d43.77494487911767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2e6b3b5a1e9b%3A0xae03f5383f37b12d!2s5%20San%20Romanoway%2C%20North%20York%2C%20ON%20M3N%202Y4%2C%20Canada!5e0!3m2!1sen!2sus!4v1628613152777!5m2!1sen!2sus"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
                     loading="lazy"
                     title="Location Map"
                   />
                 </div>
               </div>
-              
+
               <div className="animate-fade-in [animation-delay:300ms]">
                 <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
-                
+
                 <div className="glass-card p-6">
                   {!isSubmitted ? (
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="space-y-2">
                         <Label htmlFor="name">Full Name</Label>
-                        <Input 
-                          id="name" 
+                        <Input
+                          id="name"
                           name="name"
                           value={formData.name}
                           onChange={handleInputChange}
-                          placeholder="John Doe" 
-                          required 
+                          placeholder="John Doe"
+                          required
                         />
                       </div>
-                      
+
                       <div className="space-y-2">
                         <Label htmlFor="email">Email Address</Label>
-                        <Input 
-                          id="email" 
+                        <Input
+                          id="email"
                           name="email"
                           type="email"
                           value={formData.email}
                           onChange={handleInputChange}
-                          placeholder="john@example.com" 
-                          required 
+                          placeholder="john@example.com"
+                          required
                         />
                       </div>
-                      
+
                       <div className="space-y-2">
                         <Label htmlFor="subject">Subject</Label>
-                        <Input 
-                          id="subject" 
+                        <Input
+                          id="subject"
                           name="subject"
                           value={formData.subject}
                           onChange={handleInputChange}
-                          placeholder="Question about your services" 
-                          required 
+                          placeholder="Question about your services"
+                          required
                         />
                       </div>
-                      
+
                       <div className="space-y-2">
                         <Label htmlFor="message">Message</Label>
-                        <Textarea 
-                          id="message" 
+                        <Textarea
+                          id="message"
                           name="message"
                           value={formData.message}
                           onChange={handleInputChange}
-                          placeholder="How can we help you?" 
+                          placeholder="How can we help you?"
                           className="w-full min-h-[150px] p-3 rounded-md border border-input bg-background"
-                          required 
+                          required
                         />
                       </div>
-                      
+
                       <Button type="submit" className="w-full btn-primary">
                         <Send className="mr-2 h-4 w-4" />
                         Send Message
@@ -201,7 +200,7 @@ export default function Contact() {
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );

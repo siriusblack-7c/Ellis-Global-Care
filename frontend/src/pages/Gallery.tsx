@@ -1,60 +1,35 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
-const galleryImages = [
-  {
-    src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop",
-    alt: "Caregiver assisting elderly woman with a walker",
-    caption: "Providing mobility support with a smile."
-  },
-  {
-    src: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop",
-    alt: "Caregiver and elderly man playing a board game",
-    caption: "Engaging in stimulating activities and companionship."
-  },
-  {
-    src: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&h=400&fit=crop",
-    alt: "Caregiver preparing a healthy meal for a client",
-    caption: "Nutritious and delicious meals, prepared with care."
-  },
-  {
-    src: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=600&h=400&fit=crop",
-    alt: "Caregiver reading a book to an elderly woman",
-    caption: "Sharing stories and moments of connection."
-  },
-  {
-    src: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=600&h=400&fit=crop",
-    alt: "Caregiver helping an elderly man with his medication",
-    caption: "Ensuring health and safety with medication management."
-  },
-  {
-    src: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600&h=400&fit=crop",
-    alt: "Group of caregivers in a training session",
-    caption: "Our caregivers are trained to the highest standards."
-  },
-   {
-    src: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&h=400&fit=crop",
-    alt: "Caregiver and client enjoying a walk in the garden",
-    caption: "Promoting an active and healthy lifestyle."
-  },
-  {
-    src: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&h=400&fit=crop",
-    alt: "A happy client with her caregiver",
-    caption: "Building trusting and meaningful relationships."
-  }
-];
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { useGallery } from "@/contexts/GalleryContext";
+import { Filter } from "lucide-react";
 
 export default function Gallery() {
+  const { activeImages } = useGallery();
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const categories = ["all", "caregiving", "facilities", "activities", "staff"];
+
+  const filteredImages = activeImages.filter(
+    (img) => selectedCategory === "all" || img.category === selectedCategory
+  );
+
+  const categoryCount = (category: string) => {
+    if (category === "all") return activeImages.length;
+    return activeImages.filter(img => img.category === category).length;
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1">
-        <section className="py-20 bg-gray-50 dark:bg-gray-800/20">
+        <section className="py-20 bg-blue-50 dark:bg-blue-950/20 mt-20">
           <div className="container mx-auto px-4">
             <h1 className="text-4xl font-bold text-center mb-4">Our Gallery</h1>
             <p className="text-lg text-gray-600 dark:text-gray-300 text-center max-w-3xl mx-auto">
@@ -65,16 +40,63 @@ export default function Gallery() {
 
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {galleryImages.map((image, index) => (
-                <div key={index} className="group relative overflow-hidden rounded-lg shadow-lg">
-                  <img src={image.src} alt={image.alt} className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110" />
+            {/* Category Filter */}
+            <div className="mb-8">
+              <div className="flex items-center gap-2 mb-4">
+                <Filter className="h-5 w-5" />
+                <h3 className="text-lg font-semibold">Filter by Category</h3>
+              </div>
+              <div className="flex gap-2 flex-wrap">
+                {categories.map((category) => (
+                  <Button
+                    key={category}
+                    variant={selectedCategory === category ? "default" : "outline"}
+                    size="sm"
+                    onClick={() => setSelectedCategory(category)}
+                    className="capitalize hover-scale"
+                  >
+                    {category}
+                    <Badge variant="secondary" className="ml-2">
+                      {categoryCount(category)}
+                    </Badge>
+                  </Button>
+                ))}
+              </div>
+            </div>
+
+            {/* Gallery Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {filteredImages.map((image) => (
+                <div
+                  key={image.id}
+                  className="group relative overflow-hidden rounded-lg shadow-lg animate-fade-in hover-scale"
+                >
+                  <div className="aspect-video">
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
+                    />
+                  </div>
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <p className="text-white text-center p-4">{image.caption}</p>
+                    <div className="text-center p-4">
+                      <p className="text-white text-sm font-medium mb-2">{image.caption}</p>
+                      <Badge variant="secondary" className="capitalize">
+                        {image.category}
+                      </Badge>
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
+
+            {filteredImages.length === 0 && (
+              <div className="text-center py-12">
+                <p className="text-gray-500 dark:text-gray-400">
+                  No images found in this category.
+                </p>
+              </div>
+            )}
           </div>
         </section>
       </main>

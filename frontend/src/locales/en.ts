@@ -18,7 +18,7 @@ export const en = {
   footer: {
     description: "Luxurious beachfront apartments and hotel rooms with stunning sea views, offering the perfect blend of comfort and elegance for your dream vacation.",
     quickLinks: "Quick Links",
-    contact: "Contact",
+    contact: "Contact Us",
     newsletter: "Newsletter",
     newsletterDesc: "Subscribe to our newsletter for special deals and updates.",
     yourEmail: "Your email address",

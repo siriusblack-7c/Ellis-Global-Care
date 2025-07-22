@@ -14,14 +14,19 @@ export default function About() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1">
-        <section className="py-20 bg-gray-50 dark:bg-gray-800/20">
-          <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold text-center mb-4">About Ellis Global Care</h1>
-            <p className="text-lg text-gray-600 dark:text-gray-300 text-center max-w-3xl mx-auto">
-              Bridging the distance to provide professional, compassionate care for your loved ones back home.
-            </p>
+        <section className="relative py-20 bg-blue-50 dark:bg-blue-950/20 mt-20">
+          <div className="container relative z-10">
+            <div className="max-w-3xl mx-auto text-center animate-fade-in">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                About Ellis Care Global Limited
+              </h1>
+              <p className="text-muted-foreground text-lg mb-6">
+                Connecting families worldwide with professional, compassionate in-home care services for their loved ones.
+              </p>
+            </div>
           </div>
         </section>
+        
 
         <section className="py-20">
           <div className="container mx-auto px-4">
@@ -29,15 +34,18 @@ export default function About() {
               <div>
                 <h2 className="text-3xl font-bold mb-4">Our Story</h2>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  Ellis Global Care was founded by immigrants who understood the challenge of caring for aging parents from afar. We saw a need for a reliable, trustworthy service that could provide high-quality care with a personal touch.
+                  <strong>Ellis Care Global Limited</strong> was founded in Canada by immigrants who understood the unique challenge of ensuring quality care for loved ones from anywhere in the world. We recognized the need for a reliable, global platform that connects families with professionally trained caregivers.
+                </p>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  Based in North York, Ontario, Ellis provides in-home care services worldwide. Our platform enables clients to book personal support workers and caregivers for their family members, regardless of location, with full remote monitoring capabilities.
                 </p>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Our mission is to connect families with professionally trained, compassionate caregivers who can provide the support and companionship your loved ones deserve. We are committed to making a positive impact on the lives of the elderly and their families, one home at a time.
+                  We are committed to making quality care accessible globally, one family at a time. Our mission is to bridge distances and provide peace of mind through professional, compassionate in-home care services.
                 </p>
               </div>
               <div>
                 <img
-                  src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop"
+                  src="https://img.freepik.com/premium-photo/multiethnic-people-having-fun-home-kitchen-multi-generational-friendship-concept_442523-975.jpg"
                   alt="Our team"
                   className="rounded-lg shadow-lg"
                 />
@@ -80,7 +88,7 @@ export default function About() {
             </div>
           </div>
         </section>
-
+        {/* Service section */}
         <section className="py-20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Join Our Mission</h2>
@@ -89,7 +97,7 @@ export default function About() {
             </p>
             <div className="flex justify-center gap-4">
               <Button asChild className="btn-primary">
-                <Link to="/signup">
+                <Link to="/auth?mode=signup">
                   Book a Caregiver <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
